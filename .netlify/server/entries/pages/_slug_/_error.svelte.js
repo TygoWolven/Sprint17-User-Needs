@@ -1,0 +1,16 @@
+import { c as create_ssr_component, f as subscribe, d as escape } from "../../../chunks/ssr.js";
+import { p as page } from "../../../chunks/stores.js";
+const css = {
+  code: "section.svelte-1kfa69u.svelte-1kfa69u{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:1rem;width:100vw;height:100vh;background-color:var(--accent2-quaternary)}span.svelte-1kfa69u.svelte-1kfa69u{font-size:7em;display:inline-block}section.svelte-1kfa69u span.svelte-1kfa69u{width:auto;line-height:100%;letter-spacing:0.2em}section.svelte-1kfa69u h1.svelte-1kfa69u{font-size:2.5em}section.svelte-1kfa69u p.svelte-1kfa69u{font-size:16px}section.svelte-1kfa69u a.svelte-1kfa69u{padding:15px 15px;font-size:0.9em;text-decoration:none;text-transform:uppercase;letter-spacing:0.09em}",
+  map: `{"version":3,"file":"+error.svelte","sources":["+error.svelte"],"sourcesContent":["<script>\\r\\n  import { page } from '$app/stores'\\r\\n<\/script>\\r\\n\\r\\n<section>\\r\\n  <span>404</span>\\r\\n  <h1>{$page.error.message}</h1>\\r\\n  <p>{$page.error.hint}</p>\\r\\n  <a href=\\"/\\"\\r\\n    >In the meantime, head back to our <button>Home</button> to discover more amazing experiences.</a\\r\\n  >\\r\\n</section>\\r\\n\\r\\n<style>\\r\\n  section {\\r\\n    display: flex;\\r\\n    flex-direction: column;\\r\\n    justify-content: center;\\r\\n    align-items: center;\\r\\n    gap: 1rem;\\r\\n    width: 100vw;\\r\\n    height: 100vh;\\r\\n\\r\\n    background-color: var(--accent2-quaternary);\\r\\n  }\\r\\n\\r\\n  span {\\r\\n    font-size: 7em;\\r\\n    display: inline-block;\\r\\n  }\\r\\n\\r\\n  section span {\\r\\n    width: auto;\\r\\n    line-height: 100%;\\r\\n    letter-spacing: 0.2em;\\r\\n  }\\r\\n\\r\\n  section h1 {\\r\\n    font-size: 2.5em;\\r\\n  }\\r\\n\\r\\n  section p {\\r\\n    font-size: 16px;\\r\\n  }\\r\\n\\r\\n  section a {\\r\\n    padding: 15px 15px;\\r\\n    font-size: 0.9em;\\r\\n    text-decoration: none;\\r\\n    text-transform: uppercase;\\r\\n    letter-spacing: 0.09em;\\r\\n  }\\r\\n</style>\\r\\n"],"names":[],"mappings":"AAcE,qCAAQ,CACN,OAAO,CAAE,IAAI,CACb,cAAc,CAAE,MAAM,CACtB,eAAe,CAAE,MAAM,CACvB,WAAW,CAAE,MAAM,CACnB,GAAG,CAAE,IAAI,CACT,KAAK,CAAE,KAAK,CACZ,MAAM,CAAE,KAAK,CAEb,gBAAgB,CAAE,IAAI,oBAAoB,CAC5C,CAEA,kCAAK,CACH,SAAS,CAAE,GAAG,CACd,OAAO,CAAE,YACX,CAEA,sBAAO,CAAC,mBAAK,CACX,KAAK,CAAE,IAAI,CACX,WAAW,CAAE,IAAI,CACjB,cAAc,CAAE,KAClB,CAEA,sBAAO,CAAC,iBAAG,CACT,SAAS,CAAE,KACb,CAEA,sBAAO,CAAC,gBAAE,CACR,SAAS,CAAE,IACb,CAEA,sBAAO,CAAC,gBAAE,CACR,OAAO,CAAE,IAAI,CAAC,IAAI,CAClB,SAAS,CAAE,KAAK,CAChB,eAAe,CAAE,IAAI,CACrB,cAAc,CAAE,SAAS,CACzB,cAAc,CAAE,MAClB"}`
+};
+const Error = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let $page, $$unsubscribe_page;
+  $$unsubscribe_page = subscribe(page, (value) => $page = value);
+  $$result.css.add(css);
+  $$unsubscribe_page();
+  return `<section class="svelte-1kfa69u"><span class="svelte-1kfa69u" data-svelte-h="svelte-gghs7u">404</span> <h1 class="svelte-1kfa69u">${escape($page.error.message)}</h1> <p class="svelte-1kfa69u">${escape($page.error.hint)}</p> <a href="/" class="svelte-1kfa69u" data-svelte-h="svelte-9wuq20">In the meantime, head back to our <button>Home</button> to discover more amazing experiences.</a> </section>`;
+});
+export {
+  Error as default
+};

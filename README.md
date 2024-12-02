@@ -5,6 +5,14 @@ Self-guided cocktailtours naar de beste bars.
 
 <img width="1440" alt="image" src="https://github.com/user-attachments/assets/9900eeda-ba46-49bd-ad5e-b89a1e90b044">
 
+
+
+
+
+
+
+
+
 # Component Building Block
 
 ### Tour Card, Bookings Form, Infinite Carrousel
@@ -26,11 +34,19 @@ Self-guided cocktailtours naar de beste bars.
 <!-- Voeg een link toe naar Github Pages 🌐-->
 Ontwerp en maak met een team een nieuwe toegankelijke website, waarbij je een cocktail tour kan boeken binnen de steden.
 
+
 ## Gebruik
 <!--Bij Gebruik staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
 <img width="1440" alt="image" src="https://github.com/user-attachments/assets/f1213eed-017c-4744-ada9-fcd0b80e4dde">
 
+
+
 <img width="1440" alt="image" src="https://github.com/user-attachments/assets/e87f0bc2-63f4-410b-92b4-bcee8a098d53">
+
+
+
+
+
 
 ## Kenmerken
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met Javascript gedaan en hoe? Misschien heb je een framwork of library gebruikt? -->
@@ -42,14 +58,19 @@ Ontwerp en maak met een team een nieuwe toegankelijke website, waarbij je een co
 * Mobile first
 * Progressive Enhancement
 
+
 # Installatie
+
 1. To start the project you firstly have load the repo from Github Desktop.
 2. Open the terminal and enter `npm install` to install the dependencies.
 3. To start the project enter `npm run dev` to start the project. Now you will be redirected to "[https://localhost:5173/](https://localhost:5173/)".
 
+
 ## Bronnen
 
 ### Design WOGO
+
+
 
 ### Info technieken
 [SvelteKit docs](https://kit.svelte.dev/docs/introduction)     
