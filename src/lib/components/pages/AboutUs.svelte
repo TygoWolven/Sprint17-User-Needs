@@ -3,6 +3,7 @@
     import Skyline from '$lib/assets/backdrop-skyline.png'
     import InfiniteCarrousel from '../organisms/InfiniteCarrousel.svelte'
     import Title from '../atoms/Title.svelte'
+    import Bubblegum from '../organisms/Bubblegum.svelte'
 
     export let items
     let content = items[3].componentsCollection.items
@@ -62,6 +63,8 @@
       </article>
     {/each}
 </section>
+
+<Bubblegum />
 
 <style>
   /* Global Styling */
