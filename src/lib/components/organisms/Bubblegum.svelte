@@ -1,7 +1,3 @@
-<script>
-
-</script>
-
 <div class="bubble">
     <div class="shadow"></div>
     <div class="glimp"></div>
@@ -76,11 +72,11 @@
           scale: 0;
       }
       80% {
-          scale: 2;
+          scale: 1;
           visibility: hidden;
       }
       100% {
-        scale: 2;
+        scale: 1;
         visibility: hidden;
       }
   }  
