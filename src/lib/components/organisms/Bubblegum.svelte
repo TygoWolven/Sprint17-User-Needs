@@ -1,13 +1,13 @@
-<script>
-  import Crack from '$lib/assets/crack.png'
-</script>
-
 <div class="explosion">
-  <div class="foreground">
-    <span>PANG!</span>
-  </div>
+  <div class="foreground"></div>
+  <div class="pop">POP!</div>
   <div class="background"></div>
   <div class="background"></div>
+</div>
+
+<div class="martini">
+  <div class="glass"></div>
+  <div class="olives"></div>
 </div>
 
 <div class="bubble">
@@ -15,9 +15,10 @@
   <div class="glimp"></div>
 </div>
 
-<img src={Crack} alt="crack" class="screencrack">
-
 <div class="cartoon">
+  <div class="upperarm"></div>
+  <div class="forearm"></div>
+  <div class="hand"></div>
   <div class="shoulders"></div>
   <div class="hair-back"></div>
   <div class="neck"></div>
@@ -45,15 +46,10 @@
       --secondary: #F79EDB;
       --tertiary: #C581B0;
   } 
-  .screencrack {
-    width: 100%;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    opacity: 0.25;
-    animation: show ease-in forwards;
-    animation-timeline: scroll(y);
+
+  @font-face {
+    font-family: 'Chewy';
+    src: url('fonts/Chewy.ttf') format('truetype');
   }
   .explosion {
     animation: pop ease-in forwards;
@@ -63,80 +59,65 @@
     0% {
       visibility: hidden;
     }
-    81% {
+    80% {
       visibility: hidden;
     }
     82% {
       visibility: visible;
     }
-    93% {
-      visibility: visible;
-    }
-    94% {
-      visibility: hidden;
-    }
-    100% {
-      visibility: hidden;
-    }
   }
-  @keyframes show {
-    0% {
-      visibility: hidden;
-    }
-    81% {
-      visibility: hidden;
-    }
-    82% {
-      visibility: visible;
-    }
-    93% {
-      visibility: visible;
-    }
-  }
+
   .foreground {
     clip-path: polygon(63% 21%, 53% 9%, 44% 21%, 32% 14%, 26% 27%, 11% 23%, 13% 37%, 0 47%, 13% 55%, 14% 70%, 28% 66%, 36% 77%, 48% 66%, 59% 79%, 68% 65%, 83% 72%, 84% 57%, 97% 52%, 89% 39%, 94% 25%, 79% 27%, 76% 14%);    
-    background: white;
+    background: rgb(250, 250, 250);
     position: fixed;
-    bottom: 1rem;
-    left: 11rem;
-    width: 13rem;
-    height: 13rem;
+    bottom: 1.5rem;
+    left: 11.5rem;
+    width: 12rem;
+    height: 12rem;
     z-index: 100;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
 
-    & span {
-      font-size: 3rem;
-      color: rgb(200, 0, 0);
-      font-weight: 900;
-      text-shadow: 3px 0 0 black, 3px 3px 0 black;
-      transform: translateY(-0.5rem);
-    }
+  .pop {
+    position: fixed;
+    left: 11rem;
+    bottom: 2.5rem;
+    font-size: 8rem;
+    color: var(--primary);
+    font-weight: 900;
+    text-shadow: 6px 0 0 black, 6px 6px 0 black;
+    transform: translateY(-0.5rem);
+    rotate: 5deg;
+    z-index: 200;
+    letter-spacing: -5px;
+    font-family: Chewy;
   }
   .background {
     clip-path: polygon(63% 21%, 53% 9%, 44% 21%, 32% 14%, 26% 27%, 11% 23%, 13% 37%, 0 47%, 13% 55%, 14% 70%, 28% 66%, 36% 77%, 48% 66%, 59% 79%, 68% 65%, 83% 72%, 84% 57%, 97% 52%, 89% 39%, 94% 25%, 79% 27%, 76% 14%);    background: yellow;
-    background: rgb(255, 200, 0);
+    background: var(--secondary);
     position: fixed;
-    bottom: 0;
-    left: 10rem;
-    width: 15rem;
-    height: 15rem;
+    bottom: -0.5rem;
+    left: 9.5rem;
+    width: 16rem;
+    height: 16rem;
     z-index: 75;
   }
   .background + .background {
-    width: 17rem;
-    height: 17rem;
-    background: rgb(200, 0, 0);
-    bottom: -1rem;
-    left: 9rem;
+    width: 17.5rem;
+    height: 17.5rem;
+    background: var(--tertiary);
+    bottom: -1.5rem;
+    left: 8.75rem;
     z-index: 50;
   }
   .bubble {
       position: fixed;
       bottom: 3rem;
       z-index: 100;
-      left: 7.5rem;
+      left: 5rem;
       overflow: hidden;
       width: 10rem;
       aspect-ratio: 1;
@@ -174,10 +155,10 @@
           scale: 0;
       }
       80% {
-          scale: 1;
+          scale: 2;
       }
       82% {
-        scale: 5;
+        scale: 6;
         visibility: hidden;
 
       }
@@ -190,7 +171,7 @@
   .cartoon {
     position: fixed;
     bottom: 0;
-    left: 0;
+    left: -2.5rem;
     width: 15rem;
     height: 15rem;
     z-index: 100;
@@ -214,6 +195,169 @@
     --hair: var(--secondary);
     --shirt: var(--tertiary);
     --line: rgba(80,0,0,0.15);
+  }
+
+  .upperarm {
+    width: 15%;
+    height: 40%;
+    background: var(--shirt);
+    top: 77%;
+    left: 81.1%;
+    transform: translate(-50%, 0);
+    z-index: 120;
+    rotate: -10deg;
+  }
+
+  .upperarm::after {
+    content:"";
+    background: var(--primary);
+    position: absolute;
+    bottom: 25%;
+    left: 0;
+    height: 50%;
+    width: 2px;
+}
+
+.martini {
+  position: fixed;
+  width:0;
+  height:0;
+  border-bottom: 25px solid rgba(255,255,255,0.35);
+  border-right: 35px solid transparent;
+  border-left: 35px solid transparent;
+  bottom: 5.5rem;
+  left: 10.5rem;
+  transition: .3s ease;
+  scale: 0.75;
+  z-index: 150;
+
+  animation: fly ease-in forwards;
+  animation-timeline: scroll(y);
+}
+
+@keyframes fly {
+  0% {
+    transform: translateY(0);
+  }
+  80% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateX(50vw) translateY(-150vh) rotate(360deg)
+  }
+}
+
+.martini:after {
+  content:"";
+  position: absolute;
+  width:4px;
+  height:40px;
+  background-color: rgba(255,255,255,0.35);
+  top:-35px;
+  left:-2px;
+}
+
+.glass {
+  position: absolute;
+  position: absolute;
+  border-top:50px solid rgba(255,255,255,0.35);
+  border-right: 50px solid transparent;
+  border-left: 50px solid transparent;
+  width:0;
+  height:0;
+  top:-83px;
+  left:-50px;
+}
+
+.glass:before {
+  content:"";
+  position: absolute;
+  border-top:40px solid var(--primary);
+  border-left:40px solid transparent;
+  border-right:40px solid transparent;
+  width:0;
+  height:0;
+  top:-46px;
+  left:-40px;
+}
+
+.glass:after {
+  content:"";
+  position: absolute;
+  border-top:30px solid var(--secondary);
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  width:0;
+  height:0;
+  top:-36px;
+  left:-30px;
+}
+
+.olives {
+  position: absolute;
+  background-color: olive;
+
+  width:13px;
+  height:13px;
+  border-radius:50%;
+  left:25px;
+  top:-100px;
+}
+
+.olives:before {
+  content:"";
+  position: absolute;
+  background-color: black;
+  border-radius:10px;
+  width:4px;
+  height:60px;
+  top:-10px;
+  left:-4px;
+  transform: rotate(35deg);
+}
+
+.olives:after {
+  content:"";
+  position: absolute;
+  width:5px;
+  height: 5px;
+  background-color: rgba(255,255,255,0.35);
+  border-radius:50%;
+  left:-20px;
+  top:45px;
+  box-shadow:-5px -10px rgba(255,255,255,0.5),-10px 5px rgba(255,255,255,0.5), 10px -10px rgba(255,255,255,0.5), -20px -9px rgba(255,255,255,0.5);
+  animation: bubble 2s infinite;
+}
+
+@keyframes bubble {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+
+  .forearm {
+    width: 15%;
+    height: 40%;
+    background: var(--shirt);
+    top: 70%;
+    left: 95%;
+    transform: translate(-50%, 0);
+    z-index: 120;
+    rotate: 10deg;
+  }
+
+  .hand {
+    width: 17%;
+    height: 17%;
+    background: var(--skin);
+    border-radius: 50%;
+    top: 61%;
+    left: 101%;
+    transform: translate(-55%, -40%);
   }
 
   .face {
@@ -370,9 +514,8 @@
 
   .shoulders {
     width: 70%;
-    height: 30%;
+    height: 40%;
     background: var(--shirt);
-    border-radius: 50%;
     top: 61%;
     left: 50%;
     transform: translate(-50%, 0);
