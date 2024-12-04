@@ -16,6 +16,22 @@ export { default as ArrowLeftShort } from '$lib/components/atoms/icons/ArrowLeft
 export { default as ArrowRightShort } from '$lib/components/atoms/icons/ArrowRightShort.svelte'
 export { default as IconRoute } from '$lib/components/atoms/icons/IconRoute.svelte'
 export { default as IconLocation } from '$lib/components/atoms/icons/IconLocation.svelte'
+export { default as IconCocktailThin } from '$lib/components/atoms/icons/IconCocktailThin.svelte'
+export { default as IconCalendarThin } from '$lib/components/atoms/icons/IconCalendarThin.svelte'
+export { default as IconClockThin } from '$lib/components/atoms/icons/IconClockThin.svelte'
+export { default as IconLocationThin } from '$lib/components/atoms/icons/IconLocationThin.svelte'
+export { default as IconTourcardThin } from '$lib/components/atoms/icons/IconTourcardThin.svelte'
+export { default as IconGroupThin } from '$lib/components/atoms/icons/IconGroupThin.svelte'
+export { default as IconBrushThin } from '$lib/components/atoms/icons/IconBrushThin.svelte'
+export { default as IconCutleryThin } from '$lib/components/atoms/icons/IconCutleryThin.svelte'
+export { default as IconPhoneThin } from '$lib/components/atoms/icons/IconPhoneThin.svelte'
+export { default as IconMailThin } from '$lib/components/atoms/icons/IconMailThin.svelte'
+
+//Atoms / InputFields
+export { default as DatePicker } from '$lib/components/atoms/inputFields/DatePicker.svelte'
+export { default as TextareaInput } from '$lib/components/atoms/inputFields/TextareaInput.svelte'
+export { default as TextInput } from '$lib/components/atoms/inputFields/TextInput.svelte'
+export { default as TimePicker } from '$lib/components/atoms/inputFields/TimePicker.svelte'
 
 // Molecules
 export { default as TicketCard } from '$lib/components/molecules/TicketCard.svelte'

@@ -1,5 +1,5 @@
 <script>
-  import { Button, ArrowRight, RouteIcon, CocktailIcon } from '$lib/index'
+  import { Button, ArrowRight, RouteIcon, CocktailIcon, IconCocktailThin, IconCalendarThin, IconClockThin, IconLocationThin, IconTourcardThin, IconGroupThin, IconBrushThin, IconCutleryThin } from '$lib/index'
   // export let items
 </script>
 
@@ -28,7 +28,7 @@
       <p>Bedrijfsuitje, vrijgezellenfeest of vriendenactiviteit? De Cocktail Walk past perfect bij jou.</p>
       <Button
         variant="primary"
-        title="book now"
+        title="Boek nu"
         icon={ArrowRight}
         iconColor="var(--btn-primary-text-clr)"
         size="lg"
@@ -39,16 +39,16 @@
 <section>
   <div>
     <article>
-      <p><span><RouteIcon width="25" height="25" fill="var(--page-bg-color)" /></span>Amstedam & Rottedam</p>
-      <p><span><CocktailIcon width="25" height="25" fill="var(--page-bg-color)" /></span>3 Cocktails</p>
-      <p><span><CocktailIcon width="25" height="25" fill="var(--page-bg-color)" /></span>3 Barreseveringen</p>
-      <p><span><CocktailIcon width="25" height="25" fill="var(--page-bg-color)" /></span>7 Dagen per week</p>
+      <p><IconLocationThin width="30" height="30" fill="white" />Amsterdam & Rotterdam</p>
+      <p><IconCocktailThin width="30" height="30" fill="white" />3 Cocktails</p>
+      <p><IconCalendarThin width="30" height="30" fill="white" />3 Barreseveringen</p>
+      <p><IconClockThin width="30" height="30" fill="white" />7 Dagen per week</p>
     </article>
     <article>
-      <p><span><RouteIcon width="25" height="25" fill="var(--page-bg-color)" /></span>Zelfgeleide tour van 3-4 uur</p>
-      <p><span><CocktailIcon width="25" height="25" fill="var(--page-bg-color)" /></span>Groepsgroottes 6-30 personen</p>
-      <p><span><CocktailIcon width="25" height="25" fill="var(--page-bg-color)" /></span>Gepersonaliseerde kaart & routes mogelijk</p>
-      <p><span><CocktailIcon width="25" height="25" fill="var(--page-bg-color)" /></span>Snacks mogelijk</p>
+      <p><IconTourcardThin width="30" height="30" fill="white" />Zelfgeleide tour van 3-4 uur</p>
+      <p><IconGroupThin width="30" height="30" fill="white" />Groepsgroottes 6-30 personen</p>
+      <p><IconBrushThin width="30" height="30" fill="white" />Gepersonaliseerde kaart & routes mogelijk</p>
+      <p><IconCutleryThin width="30" height="30" fill="white" />Snacks mogelijk</p>
     </article>
   </div>
 </section>
@@ -90,6 +90,18 @@
     gap: 1em;
   }
 
+  section:nth-of-type(2) > div > article::before {
+    content: '';
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 4px;
+    background-color: #FFAA81;
+    border-radius: 4px;
+    margin-bottom: 4px;
+    box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
+    animation: none;
+  }
   section:nth-of-type(2) > div:first-of-type {
     margin-bottom: 1em;
   }
@@ -127,6 +139,22 @@
     padding: 0.5em;
   }
 
+  
+  article > p {
+    color: white;
+    font-weight: 600;
+  }
+  
+  article > p {
+    display: flex;
+    gap: 0.5em;
+    align-items: flex-end;
+  }
+
+  h1, p {
+    animation: none;
+  }
+
   h1 {
     position: relative;
     display: inline-block;
@@ -137,9 +165,6 @@
     font-size: clamp(2.648rem, 6vw, 4.241rem);
     letter-spacing: -1px;
     filter: drop-shadow(0 0 0.4rem #000);
-    animation: heading;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
   }
 
   @keyframes heading {
@@ -155,9 +180,6 @@
     font-size: 1.2rem;
     font-weight: 700;
     position: relative;
-    animation-name: content;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
   }
 
   @keyframes content {
@@ -166,6 +188,19 @@
     }
     100% {
       left: 0px;
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    h1 {
+      animation: heading 3s forwards;
+    }
+
+    p {
+      animation: content 3s forwards;
+    }
+    section:nth-of-type(2) > div > article::before {
+      animation: content 3s forwards;
     }
   }
 
