@@ -33,7 +33,7 @@
   } 
   .bubble {
       position: sticky;
-      bottom: 2.6rem;
+      bottom: 3rem;
       z-index: 100;
       left: 7.5rem;
       overflow: hidden;
@@ -42,7 +42,7 @@
       border-radius: 100%;
       background: var(--primary);   
       border: 0.25rem solid var(--tertiary);
-      animation: grow-progress linear forwards;
+      animation: grow-progress ease-in forwards;
       animation-timeline: scroll(y);
       transform-origin: left;
       z-index: 200;
@@ -67,19 +67,39 @@
       background: white;
       border-radius: 75% 40% 75% 40%;
   }
+
   @keyframes grow-progress {
       0% {
           scale: 0;
       }
       80% {
           scale: 1;
-          visibility: hidden;
+      }
+      82% {
+        scale: 5;
+        visibility: hidden;
+
       }
       100% {
         scale: 1;
         visibility: hidden;
       }
   }  
+
+  @keyframes pop {
+    0% {
+      background: red;
+    }
+    81% {
+      background: red;
+    }
+    82% {
+      background: blue;
+    }
+    100% {
+      background: red;
+    }
+  }
 
   .cartoon {
     position: sticky;
@@ -112,12 +132,14 @@
 
   .face {
     width: 36%;
-    height: 45%;
+    height: 40%;
     background: var(--skin);
     border-radius: 100% 100% / 20% 20% 120% 120%;
     top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
+    animation: pop ease-in forwards;
+      animation-timeline: scroll(y);
   }
 
   .neck {
@@ -133,13 +155,16 @@
 
   .mouth {
     width: 40%;
-    height: 3%;
-    border: 0.25vmin solid rgba(0,0,0,0.2);
-    border-top-color: transparent;
-    border-radius: 100% / 100% 100% 40% 50%;
-    bottom: 20%;
+    height: 8%;
+    background: linear-gradient(
+      to bottom,
+      darkred 50%,
+      red 50%
+    );
+    border-radius: 100% / 70% 70% 100% 100%;
+    bottom: 17%;
     left: 50%;
-    transform: translate(-50%, 0) rotate(2deg);
+    transform: translate(-50%, 0);
   }
 
   .nose {
@@ -192,9 +217,9 @@
 
   .eye {
     width: 35%;
-    height: 13%;
+    height: 16%;
     background: white;
-    border-radius:  80% 90% 30% 40% / 70% 100% 90% 100%;
+    border-radius:  80% 100% 40% 40% / 80% 100% 80% 100%;
     top: 28%;
     right: 7%;
     box-shadow: 0 -0.5vmin var(--line);
@@ -208,13 +233,13 @@
   }
 
   .pupil {
-    width: 25%;
-    height: 50%;
+    width: 35%;
+    height: 80%;
     background: #222;
     border-radius: 50%;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -40%);
+    transform: translate(-55%, -40%);
     box-shadow: 0 0 0 0.6vmin var(--iris);
   }
 
@@ -232,16 +257,15 @@
   .eyebrow {
     width: 40%;
     height: 20%;
-    top: 15%;
+    top: 20%;
     right: 4%;
     border-radius:  100% 90% 100% 40% / 70% 100% 90% 100%;
     box-shadow: -0.25vmin -1.5vmin 0 -0.25vmin rgba(0,0,0,0.1), -0.25vmin -1.5vmin 0 -0.25vmin var(--hair);
-    transform: rotate(8deg);
+    transform: rotate(4deg);
   }
 
   .eyebrow + .eyebrow {
-
-    transform: scaleX(-1) rotate(12deg);
+    transform: scaleX(-1) rotate(4deg);
     left: 4%;
     right: auto;
   }
