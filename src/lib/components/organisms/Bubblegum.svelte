@@ -1,28 +1,42 @@
-<div class="bubble">
-    <div class="shadow"></div>
-    <div class="glimp"></div>
+<script>
+  import Crack from '$lib/assets/crack.png'
+</script>
+
+<div class="explosion">
+  <div class="foreground">
+    <span>PANG!</span>
+  </div>
+  <div class="background"></div>
+  <div class="background"></div>
 </div>
 
+<div class="bubble">
+  <div class="shadow"></div>
+  <div class="glimp"></div>
+</div>
+
+<img src={Crack} alt="crack" class="screencrack">
+
 <div class="cartoon">
-    <div class="shoulders"></div>
-    <div class="hair-back"></div>
-    <div class="neck"></div>
-    <div class="ear earring"></div>
-    <div class="ear earring"></div>
-    <div class="face">
-      <div class="cheek"></div>
-      <div class="nose"></div>
-      <div class="mouth"></div>
-      <div class="eye">
-        <div class="pupil"></div>
-      </div>
-      <div class="eye">
-        <div class="pupil"></div>
-      </div>
-      <div class="eyebrow"></div>
-      <div class="eyebrow"></div>
+  <div class="shoulders"></div>
+  <div class="hair-back"></div>
+  <div class="neck"></div>
+  <div class="ear earring"></div>
+  <div class="ear earring"></div>
+  <div class="face">
+    <div class="cheek"></div>
+    <div class="nose"></div>
+    <div class="mouth"></div>
+    <div class="eye">
+      <div class="pupil"></div>
     </div>
+    <div class="eye">
+      <div class="pupil"></div>
+    </div>
+    <div class="eyebrow"></div>
+    <div class="eyebrow"></div>
   </div>
+</div>
 
 <style>
   :root {
@@ -31,8 +45,95 @@
       --secondary: #F79EDB;
       --tertiary: #C581B0;
   } 
+  .screencrack {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0.25;
+    animation: show ease-in forwards;
+    animation-timeline: scroll(y);
+  }
+  .explosion {
+    animation: pop ease-in forwards;
+    animation-timeline: scroll(y);
+  }
+  @keyframes pop {
+    0% {
+      visibility: hidden;
+    }
+    81% {
+      visibility: hidden;
+    }
+    82% {
+      visibility: visible;
+    }
+    93% {
+      visibility: visible;
+    }
+    94% {
+      visibility: hidden;
+    }
+    100% {
+      visibility: hidden;
+    }
+  }
+  @keyframes show {
+    0% {
+      visibility: hidden;
+    }
+    81% {
+      visibility: hidden;
+    }
+    82% {
+      visibility: visible;
+    }
+    93% {
+      visibility: visible;
+    }
+  }
+  .foreground {
+    clip-path: polygon(63% 21%, 53% 9%, 44% 21%, 32% 14%, 26% 27%, 11% 23%, 13% 37%, 0 47%, 13% 55%, 14% 70%, 28% 66%, 36% 77%, 48% 66%, 59% 79%, 68% 65%, 83% 72%, 84% 57%, 97% 52%, 89% 39%, 94% 25%, 79% 27%, 76% 14%);    
+    background: white;
+    position: fixed;
+    bottom: 1rem;
+    left: 11rem;
+    width: 13rem;
+    height: 13rem;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & span {
+      font-size: 3rem;
+      color: rgb(200, 0, 0);
+      font-weight: 900;
+      text-shadow: 3px 0 0 black, 3px 3px 0 black;
+      transform: translateY(-0.5rem);
+    }
+  }
+  .background {
+    clip-path: polygon(63% 21%, 53% 9%, 44% 21%, 32% 14%, 26% 27%, 11% 23%, 13% 37%, 0 47%, 13% 55%, 14% 70%, 28% 66%, 36% 77%, 48% 66%, 59% 79%, 68% 65%, 83% 72%, 84% 57%, 97% 52%, 89% 39%, 94% 25%, 79% 27%, 76% 14%);    background: yellow;
+    background: rgb(255, 200, 0);
+    position: fixed;
+    bottom: 0;
+    left: 10rem;
+    width: 15rem;
+    height: 15rem;
+    z-index: 75;
+  }
+  .background + .background {
+    width: 17rem;
+    height: 17rem;
+    background: rgb(200, 0, 0);
+    bottom: -1rem;
+    left: 9rem;
+    z-index: 50;
+  }
   .bubble {
-      position: sticky;
+      position: fixed;
       bottom: 3rem;
       z-index: 100;
       left: 7.5rem;
@@ -86,23 +187,8 @@
       }
   }  
 
-  @keyframes pop {
-    0% {
-      background: red;
-    }
-    81% {
-      background: red;
-    }
-    82% {
-      background: blue;
-    }
-    100% {
-      background: red;
-    }
-  }
-
   .cartoon {
-    position: sticky;
+    position: fixed;
     bottom: 0;
     left: 0;
     width: 15rem;
@@ -138,8 +224,6 @@
     top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
-    animation: pop ease-in forwards;
-      animation-timeline: scroll(y);
   }
 
   .neck {
