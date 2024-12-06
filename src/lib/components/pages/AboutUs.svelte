@@ -165,7 +165,8 @@
     flex-wrap: wrap;
 
     & article {
-      margin: var(--margin);
+      margin: 0 calc(var(--margin) * 2);
+      height: fit-content;
 
       & p {
         max-width: 36ch;

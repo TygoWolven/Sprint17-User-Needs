@@ -18,7 +18,7 @@
 
     bottom: 3rem;
     left: 5rem;
-    z-index: 200;
+    z-index: 200; 
   }
   
   .shadow {

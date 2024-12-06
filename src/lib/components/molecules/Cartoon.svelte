@@ -67,7 +67,7 @@
 
   .upperarm::after {
     content:"";
-    background: var(--primary);
+    background: var(--secondary);
     position: absolute;
     bottom: 25%;
     left: 0;
