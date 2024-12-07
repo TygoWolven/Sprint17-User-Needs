@@ -36,9 +36,11 @@
   
   @keyframes flyingGlass {
     0%, 80% {
+      opacity: 1;
       transform: translateY(0);
     }
     100% {
+      opacity: 0;
       transform: translateX(50vw) 
                  translateY(-150vh) 
                  rotate(360deg) 
