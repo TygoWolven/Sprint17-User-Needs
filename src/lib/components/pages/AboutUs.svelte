@@ -2,8 +2,9 @@
     import Scenery from '$lib/assets/about-us-scenery.jpg'
     import Skyline from '$lib/assets/backdrop-skyline.png'
     import InfiniteCarrousel from '../organisms/InfiniteCarrousel.svelte'
-    import Title from '../atoms/Title.svelte'
     import Mascotte from '../organisms/Mascotte.svelte';
+    import Canvas from '../organisms/Canvas.svelte';
+    import Title from '../atoms/Title.svelte'
     
     export let items
     let content = items[3].componentsCollection.items
@@ -49,7 +50,8 @@
     color='light' />
   <p>{content[0].textParagraph}</p>
   <span>{content[1].textParagraph}</span>
-  <img src={Skyline} alt="Cartoony skyline">
+  <!-- <img src={Skyline} alt="Cartoony skyline"> -->
+  <Canvas />
 </section>
 
 <section id="information">
@@ -64,7 +66,7 @@
     {/each}
 </section>
 
-<Mascotte />
+<!-- <Mascotte /> -->
 
 <style>
   /* Global Styling */
