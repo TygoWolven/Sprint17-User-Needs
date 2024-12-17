@@ -8,6 +8,17 @@
     
     export let items
     let content = items[3].componentsCollection.items
+
+    import { onMount } from 'svelte';
+    onMount(() => {
+      const btn = document.getElementById("btn-toggle"),
+            page = document.querySelector(':root');
+      
+      btn.addEventListener("click", function() {
+          console.log('clicked');
+          page.classList.toggle("christmas-theme");
+        });    
+      });
 </script>
 
 <svelte:head>
