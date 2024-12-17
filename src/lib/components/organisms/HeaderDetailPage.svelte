@@ -1,11 +1,12 @@
 <script>
   import { HeaderContent, HeaderImage } from '$lib/index'
   export let items
+  const items2 = items[0].componentsCollection.items[0]
 </script>
 
 <div class="header-container">
-  <HeaderImage src={'../header-image-large.webp'} opacity="0.2" alt="cocktail" />
-  <div class="header-text">
+  <HeaderImage src={items2.asset.url} opacity="0.2" alt="premium walk hero" title={items2.asset.title.replace(/\s+/g, '-')}  />
+  <div  class="header-text">
     <HeaderContent items={items[0].componentsCollection.items[0]} />
   </div>
 </div>
