@@ -152,15 +152,15 @@ h1, h2 {
 :root.christmas-theme {
   --page-bg-color: hsl(0, 100%, 20%);
   --accent1-primary: hsl(0, 0%, 100%);
-  --accent1-secondary: hsl(207, 100%, 28%);
   --accent1-tertiary: hsl(0, 100%, 30%);
-  --accent1-quaternary: hsl(0, 0%, 21%);
 
   --accent2-primary: hsl(0, 100%, 40%);
-  --accent2-secondary: hsl(0, 100%, 40%);
-  --accent2-tertiary: hsl(0, 100%, 18%);
+  --accent2-secondary: hsl(0, 100%, 50%);
+  --accent2-tertiary: hsl(0, 100%, 40%);
+  --btn-primary-bg: hsl(0, 100%, 40%);
+  --btn-primary-text-clr: hsl(0, 0%, 100%);
 
   --snowflake: white;
-  --title-primary: hsl(125, 100%, 20%);
-  --title-secondary: hsl(125, 100%, 20%);
+  --title-primary: hsl(50, 100%, 50%);
+  --title-secondary: hsl(50, 100%, 50%);
 }

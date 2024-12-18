@@ -1,6 +1,7 @@
 <script>
     import Scenery from '$lib/assets/about-us-scenery.jpg'
     import Skyline from '$lib/assets/backdrop-skyline.png'
+    import Song from '$lib/assets/christmas-playlist.mp3'
     import InfiniteCarrousel from '../organisms/InfiniteCarrousel.svelte'
     import Mascotte from '../organisms/Mascotte.svelte';
     import Canvas from '../organisms/Canvas.svelte';
@@ -14,20 +15,32 @@
       const button = document.getElementById("christmas-toggle"),
             text = document.getElementById('sign'),
             santa = document.querySelector('.sleigh-santa'),
-            page = document.querySelector(':root');
+            song = document.querySelector('audio'),
+            logos = document.querySelectorAll('.color-logo'),
+            root = document.querySelector(':root');
       
       button.addEventListener("click", function() {
-          page.classList.toggle("christmas-theme");
+          root.classList.toggle("christmas-theme");
           if (text.innerHTML === 'Enter') {
             text.innerHTML = "Leave";
             santa.style.display = "block"
+            logos.forEach((logo) => {
+              logo.style.filter = "brightness(100)"
+            })
+            song.play()
           } else {
             text.innerHTML = "Enter";
             santa.style.display = "none"
+            logos.forEach((logo) => {
+              logo.style.filter = "unset"
+            })
+            song.pause()
           }
-        });    
+        });
       });
 </script>
+
+<audio src={Song}></audio>
 
 <svelte:head>
   <title>WoGo | Over ons</title>
@@ -184,7 +197,7 @@
 
     & span {
       margin: var(--margin);
-      color: var(--txt-secondary-clr);
+      color: var(--title-primary);
     }
     & img {
       position: absolute;
@@ -205,6 +218,7 @@
 
       & p {
         max-width: 36ch;
+        color: var(--btn-primary-text-clr);
       }
     }
   }

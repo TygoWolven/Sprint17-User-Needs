@@ -15,7 +15,7 @@
       data-sveltekit-preload-data="false"
     />
   </span>
-  <img src={logo} height="70" width="70" alt="Wogo Logo" />
+  <img src={logo} height="70" width="70" alt="Wogo Logo" class="color-logo" />
   <button type="button" id="mainMenuOpen" tabindex="-1" aria-label="hamburger-button"
     ><span></span></button
   >

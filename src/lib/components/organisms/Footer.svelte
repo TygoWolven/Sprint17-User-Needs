@@ -9,7 +9,7 @@
     <div class="footer-logo-social">
       <ul class="social-media-list" role="list" aria-label="Social links">
         {#each footerItems[0].socialMediaIconsCollection.items as item}
-          <li>
+          <li class="color-logo">
             <Link href={item.url}>
               <Image
                 src={item.assetCollection.items[0].url}
@@ -23,7 +23,7 @@
         {/each}
       </ul>
       <p class="footer-text">Follow us:</p>
-      <img src={logo} height="100" width="100" alt="Wogo Logo" />
+      <img src={logo} height="100" width="100" alt="Wogo Logo" class="color-logo" />
     </div>
     <div class="footer-section">
       <nav>
@@ -57,9 +57,6 @@
         />
       </form>
     </div>
-  </div>
-  <div class="copyright">
-    <p class="copyright-text">copyright test</p>
   </div>
 </footer>
 
@@ -146,18 +143,11 @@
     margin-bottom: 1rem;
   }
 
-  .copyright {
-    background-color: var(--sec-color-alpha);
-    text-align: center;
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
-    font-size: 0.875rem;
-  }
-
   /* Desktop */
   @media screen and (min-width: 48em) {
     footer {
       padding: 0 3vw;
+      padding-bottom: 3vw;
     }
 
     .footer-wrapper {
