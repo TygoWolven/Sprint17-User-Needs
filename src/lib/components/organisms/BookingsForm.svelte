@@ -21,15 +21,15 @@
 
 <section>
   <form on:submit={handleSubmit} method="post" action="/group-bookings">
-    <h1 class="animated-text">Boeken</h1>
-    <TextInput id="first-name" name="first-name" required>Voornaam:</TextInput>
-    <TextInput id="last-name" name="last-name" required>Achternaam:</TextInput>
-    <TextInput id="email" name="email" type="email" required>Email:</TextInput>
-    <TextInput id="phone" name="phone" type="tel" required>Telefoonnummer:</TextInput>
-    <TextInput id="persons" name="persons" required>Hoeveel personen?</TextInput>
-    <TextareaInput id="request" name="story" placeholder="Typ hier uw bericht...">Aanvraag:</TextareaInput>
-    <DatePicker id="date" name="date" required>Datum:</DatePicker>
-    <TimePicker id="time" name="time" value="14:30" min="09:00" max="22:00" required>Kies een tijdstip:</TimePicker>
+    <h1 class="animated-text">Boeken🎄</h1>
+    <TextInput id="first-name" name="first-name" required>🎅 Voornaam:</TextInput>
+    <TextInput id="last-name" name="last-name" required>🧑‍🎄 Achternaam:</TextInput>
+    <TextInput id="email" name="email" type="email" required>📧 Email:</TextInput>
+    <TextInput id="phone" name="phone" type="tel" required>📞 Telefoonnummer:</TextInput>
+    <TextInput id="persons" name="persons" required>👨‍👩‍👧‍👦 Hoeveel personen?</TextInput>
+    <TextareaInput id="request" name="story" placeholder="Typ hier uw bericht...">📝 Aanvraag:</TextareaInput>
+    <DatePicker id="date" name="date" required>📅 Datum:</DatePicker>
+    <TimePicker id="time" name="time" value="14:30" min="09:00" max="22:00" required>🕒 Kies een tijdstip:</TimePicker>
 
     {#if isLoading}
       <article class="loading-state">
@@ -51,7 +51,7 @@
       </article>
       {/if}
 
-    <button type="submit">Verstuur</button>
+    <button type="submit">🎁 Verstuur</button>
   </form>
 
   <article>
@@ -113,7 +113,7 @@
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: #3F2B21;
+    background-color: #145A32;
     border-radius: 8px;
     z-index: -1;
     box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
@@ -134,7 +134,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #3F2B21;
+    background-color: #145A32;
     color: white;
     border-radius: 8px;
     position: absolute;
@@ -153,7 +153,7 @@
 
   .spinner {
     border: 16px solid #f3f3f3;
-    border-top: 16px solid #f7956f;
+    border-top: 16px solid var(--accent2-primary);
     border-radius: 50%;
     width: 120px;
     height: 120px;
@@ -167,12 +167,14 @@
   }
 
   button {
-    background-color: #f7956f;
+    background-color: var(--btn-primary-bg);
     border: none;
-    padding: 1em;
     color: black;
     cursor: pointer;
     border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.3em;
+    padding: 0.7em;
   }
 
   section > article > div {
@@ -188,7 +190,7 @@
 
   article > div,
   article > ul > li {
-    background-color: #3F2B21;
+    background-color: #145A32;
     border-radius: 8px;
     box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
   }
@@ -218,7 +220,7 @@
   }
 
   article > ul > li {
-    background-color: #3F2B21;
+    background-color: #145A32;
     border-radius: 8px;
   }
 

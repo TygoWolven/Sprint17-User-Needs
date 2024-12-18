@@ -1,6 +1,52 @@
 <script>
-  import { Button, ArrowRight, RouteIcon, CocktailIcon, IconCocktailThin, IconCalendarThin, IconClockThin, IconLocationThin, IconTourcardThin, IconGroupThin, IconBrushThin, IconCutleryThin } from '$lib/index'
+  import { Button, IconCocktailThin, IconCalendarThin, IconClockThin, IconLocationThin, IconTourcardThin, IconGroupThin, IconBrushThin, IconCutleryThin } from '$lib/index'
   // export let items
+  import image from "../../assets/kerstcocktail1.png"
+
+  // Notes and durations for "Jingle Bells"
+  const notes = [
+    { freq: 659.25, duration: 400 }, // E
+    { freq: 659.25, duration: 400 }, // E
+    { freq: 659.25, duration: 800 }, // E (hold)
+    { freq: 659.25, duration: 400 }, // E
+    { freq: 659.25, duration: 400 }, // E
+    { freq: 659.25, duration: 800 }, // E
+    { freq: 659.25, duration: 400 }, // E
+    { freq: 784, duration: 400 },    // G
+    { freq: 523.25, duration: 400 }, // C
+    { freq: 587.33, duration: 400 }, // D
+    { freq: 659.25, duration: 1200 },// E (hold)
+  ];
+
+  // Function to play notes using Web Audio API
+  function playJingleBells() {
+    const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+
+    let startTime = audioContext.currentTime;
+
+    // Function to play a single note
+    function playNote(freq, duration, time) {
+      const oscillator = audioContext.createOscillator();
+      const gainNode = audioContext.createGain();
+
+      oscillator.connect(gainNode);
+      gainNode.connect(audioContext.destination);
+
+      oscillator.type = "sine"; // Sine wave for a smooth tone
+      oscillator.frequency.value = freq;
+
+      gainNode.gain.setValueAtTime(0.1, time); // Volume
+
+      oscillator.start(time);
+      oscillator.stop(time + duration / 1000); // Convert ms to seconds
+    }
+
+    // Schedule each note
+    notes.forEach(({ freq, duration }) => {
+      playNote(freq, duration, startTime);
+      startTime += duration / 1000; // Move to the next note
+    });
+  }
 </script>
 
 <section>
@@ -28,13 +74,15 @@
       <p>Bedrijfsuitje, vrijgezellenfeest of vriendenactiviteit? De Cocktail Walk past perfect bij jou.</p>
       <Button
         variant="primary"
-        title="Boek nu"
-        icon={ArrowRight}
+        title="Boek nu 🎁"
         iconColor="var(--btn-primary-text-clr)"
         size="lg"
       />
     </div>
   </article>
+  <button on:click={playJingleBells}>
+    <img src={image} alt="">
+  </button>
 </section>
 <section>
   <div>
@@ -56,6 +104,8 @@
 <style>
   section {
     padding-inline: 2em;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6); /* Snowy glow */
+    container: cocktail / inline-size;
   }
 
   section:nth-of-type(1) {
@@ -70,6 +120,22 @@
     margin: auto;
     width: 100%;
   }
+  section:nth-of-type(1) > button {
+    position: absolute;
+    bottom: -10%;
+    right: 5%;
+    z-index: 1;
+    height: 45%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    animation: shake 2s ease infinite;
+  }
+
+  section:nth-of-type(1) > button > img {
+    height: 100%;
+    width: 100%;
+  }
 
   section:nth-of-type(2) {
     background-color: var(--accent1-secondary);
@@ -82,6 +148,7 @@
     justify-content: space-between;
     max-width: 90em;
     margin: auto;
+    gap: 2em;
   }
 
   section:nth-of-type(2) > div > article {
@@ -102,10 +169,6 @@
     box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
     animation: none;
   }
-  section:nth-of-type(2) > div:first-of-type {
-    margin-bottom: 1em;
-  }
-
   video {
     position: absolute;
     top: 50%;
@@ -166,7 +229,6 @@
     letter-spacing: -1px;
     filter: drop-shadow(0 0 0.4rem #000);
   }
-
   @keyframes heading {
     0% {
       top: -200px;
@@ -189,6 +251,15 @@
     100% {
       left: 0px;
     }
+  }
+
+  @keyframes shake {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(5deg); }
+    20% { transform: rotate(0eg); }
+    30% { transform: rotate(-5deg); }
+    60% { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
   }
 
   @media (prefers-reduced-motion: no-preference) {
@@ -221,7 +292,7 @@
       flex-direction: row;
     }
     p {
-      font-size: 1.5em;
+      font-size: 1.1em;
     }
     section:nth-of-type(2) > div:first-of-type {
     margin-bottom: 0;
@@ -231,6 +302,23 @@
   @media (min-width: 55em) {
     section {
       padding-inline: 8em;
+    }
+    p {
+      font-size: 1.5em;
+    } 
+  }
+
+  @container cocktail (min-width: 44em) {
+    section:nth-of-type(1)  button {
+      bottom: -5%;
+      right: 10%;
+    }
+  }
+
+  @container cocktail (min-width: 55em) {
+    section:nth-of-type(1)  button {
+      right: 15%;
+      height: 65%;
     }
   }
 </style>
