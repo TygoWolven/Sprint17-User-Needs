@@ -132,7 +132,7 @@
   width: 295px;
   height: 155px;
   transform: rotate(-1deg);
-  animation: flying-santa 10s infinite linear;
+  animation: flying-santa 20s infinite linear;
   display: none;
 }
 
@@ -141,7 +141,7 @@
         transform: translateX(0);
     } 
     100% {
-        transform: translateX(150rem);
+        transform: translateX(250rem);
     }
 }
 

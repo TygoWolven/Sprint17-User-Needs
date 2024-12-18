@@ -41,6 +41,8 @@ h1, h2 {
   --accent2-quaternary: hsl(18.95, 100%, 92.55%);
 
   --snowflake: transparent;
+  --title-primary: var(--accent2-primary);
+  --title-secondary: var(--txt-dark-clr);
 
   --txt-dark-clr: hsl(20, 31%, 10%);
   --txt-primary-clr: hsl(19.52, 100%, 75.29%);
@@ -157,7 +159,8 @@ h1, h2 {
   --accent2-primary: hsl(0, 100%, 40%);
   --accent2-secondary: hsl(0, 100%, 40%);
   --accent2-tertiary: hsl(0, 100%, 18%);
-  --accent2-quaternary: hsl(59, 100%, 47%);
 
   --snowflake: white;
+  --title-primary: hsl(125, 100%, 20%);
+  --title-secondary: hsl(125, 100%, 20%);
 }

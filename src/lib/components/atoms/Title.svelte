@@ -34,8 +34,10 @@
 
   .title-light {
     color: var(--accent2-primary);
+    color: var(--title-primary);
   }
   .title-dark {
     color: var(--txt-dark-clr);
+    color: var(--title-secondary);
   }
 </style>
