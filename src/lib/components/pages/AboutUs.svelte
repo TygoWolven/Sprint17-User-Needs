@@ -121,7 +121,7 @@
   <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
 </div>
 
-<!-- <Mascotte /> -->
+<Mascotte />
 
 <style>
   /* Global Styling */
