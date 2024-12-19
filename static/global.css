@@ -47,6 +47,7 @@ h1, h2 {
   --snowflake: transparent;
   --title-primary: var(--accent2-primary);
   --title-secondary: var(--txt-dark-clr);
+  --link-color: hsl(19.52, 100%, 75.29%);
 
   --txt-dark-clr: hsl(20, 31%, 10%);
   --txt-primary-clr: hsl(19.52, 100%, 75.29%);
@@ -163,6 +164,7 @@ h1, h2 {
   --accent2-tertiary: hsl(0, 100%, 40%);
   --btn-primary-bg: hsl(0, 100%, 40%);
   --btn-primary-text-clr: hsl(0, 0%, 100%);
+  --link-color: hsl(0, 0%, 100%);
 
   --snowflake: white;
   --title-primary: hsl(50, 100%, 50%);

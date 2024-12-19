@@ -31,7 +31,7 @@
     align-items: center;
     gap: 0.5rem;
     text-decoration: none;
-    color: white;
+    color: var(--link-color);
     font-size: var(--font-size);
     white-space: nowrap;
     filter: var(--filter);

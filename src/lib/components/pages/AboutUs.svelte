@@ -217,9 +217,9 @@
   /* 'Informatie' section */
   #information {
     background: var(--accent2-primary);
-    min-height: fit-content;
     flex-direction: row;
     flex-wrap: wrap;
+    height: 70vh;
 
     & article {
       margin: 0 calc(var(--margin) * 2);
