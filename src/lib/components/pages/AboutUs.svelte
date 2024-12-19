@@ -17,6 +17,7 @@
             santa = document.querySelector('.sleigh-santa'),
             song = document.querySelector('audio'),
             logos = document.querySelectorAll('.color-logo'),
+            titles = document.querySelectorAll('.christmas-title'),
             root = document.querySelector(':root');
       
       button.addEventListener("click", function() {
@@ -27,12 +28,20 @@
             logos.forEach((logo) => {
               logo.style.filter = "brightness(100)"
             })
+            titles.forEach((title) => {
+              title.style.fontFamily = "WonderfulChristmas"
+              title.style.textTransform = "capitalize"
+            })
             song.play()
           } else {
             text.innerHTML = "Enter";
             santa.style.display = "none"
             logos.forEach((logo) => {
               logo.style.filter = "unset"
+            })
+            titles.forEach((title) => {
+              title.style.fontFamily = "Epilogue"
+              title.style.textTransform = "uppercase"
             })
             song.pause()
           }
