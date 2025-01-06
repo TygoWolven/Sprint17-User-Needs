@@ -19,17 +19,17 @@
   <div class="ear earring"></div>
   <div class="ear earring"></div>
   <div class="face">
-    <div class="cheek"></div>
     <div class="nose"></div>
+    <div class="cheek"></div>
     <div class="mouth"></div>
+    <div class="eyebrow"></div>
+    <div class="eyebrow"></div>
     <div class="eye">
       <div class="pupil"></div>
     </div>
     <div class="eye">
       <div class="pupil"></div>
     </div>
-    <div class="eyebrow"></div>
-    <div class="eyebrow"></div>
   </div>
 </div>
 

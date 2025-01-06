@@ -16,7 +16,7 @@
   <Logo source='{London}' alt='The London Essence' />
   <Logo source='{Absolut}' alt='Absolut Vodka' />
   <Logo source='{CocaCola}' alt='Coca Cola' />
-  <Logo source='{Passoa}' alt='passoa' />
+  <Logo source='{Passoa}' alt='Passoa' />
 </ul>
 
 <style>
