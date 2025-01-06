@@ -107,7 +107,7 @@
     {/each}
 </section>
 
-<div class="snowflakes">
+<!-- <div class="snowflakes">
   <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
   <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
   <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
@@ -119,9 +119,9 @@
   <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
   <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
   <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-</div>
+</div> -->
 
-<Mascotte />
+<!-- <Mascotte /> -->
 
 <style>
   /* Global Styling */
@@ -244,7 +244,7 @@
   }
 
   /* Snowstorm */
-.snowflakes {
+/* .snowflakes {
 	width: 100%; 
   height: 1200px;
 	position: fixed; 
@@ -336,5 +336,5 @@ i:before { transform: rotate(240deg); }
   opacity:.9;
   animation-delay: 3.5s;
   animation-timing-function:ease-in;
-}
+} */
 </style>

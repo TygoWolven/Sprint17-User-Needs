@@ -96,14 +96,14 @@
         <div class="door">
             <div class="doorknob"></div>
         </div>
-        <div class="sign" id="sign">Enter</div>
+        <!-- <div class="sign" id="sign">Enter</div> -->
         <div class="crossed-window"></div>
         <div class="crossed-window"></div>
     </div>
     <div class="chimney"></div>
     <div class="roof-trim"></div>
 
-    <!-- Bridge elements -->
+    <!-- Bridge elements -->  
     <div class="bridge">
         <div class="outer-road"></div>
         <div class="lever">
@@ -893,16 +893,16 @@
         left: 0.25rem;
     }
 
-    .sign {
+    /* .sign {
         font-size: 0.65rem;
         bottom: 3rem;
         left: 9rem;
-    }
+    } */
 
-    .door:hover,
+    /* .door:hover,
     .doorway:hover ~ .door {
         transform: rotateY(80deg);
-    }
+    } */
 
     .doorway {
         position: absolute;
@@ -916,11 +916,11 @@
         transition: 0.5s ease;
     }
 
-    .house:hover .doorway,
+    /* .house:hover .doorway,
     .doorway:hover {
         cursor: pointer;
         box-shadow: red 0px 10px 20px;
-    }
+    } */
 
     .crossed-window {
         width: 2rem;
