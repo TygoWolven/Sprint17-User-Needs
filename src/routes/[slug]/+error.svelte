@@ -9,7 +9,7 @@
     our cocktail menu is still on point. Let’s get you back to something delicious!"
   </p>
   <Button
-    style="width: 40%;"
+    style="width: 25%;"
     href="/home" 
     variant="primary" 
     title="Back to home" 
