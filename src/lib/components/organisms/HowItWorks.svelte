@@ -1,12 +1,12 @@
 <script>
-  export let items
+  export let items;
 </script>
 
 <section>
   <ul>
     <li class="card-list card-number">
       <div class="card-body" tabIndex="0">
-          {#each items[1].componentsCollection.items as item, index}
+        {#each items[1].componentsCollection.items as item, index}
           <div class="text-content">
             <div class="span-cirkel">
               <span aria-label="Step {index + 1}">{index + 1}</span>
@@ -14,9 +14,9 @@
             </div>
             <p>{item.textParagraph}</p>
           </div>
-          {/each}
-        </div>
-      </li>
+        {/each}
+      </div>
+    </li>
   </ul>
 </section>
 
@@ -150,6 +150,27 @@
     }
     .span-cirkel {
       gap: 2em;
+    }
+  }
+
+  /* SCROLL DRIVEN ANIMATION  */
+  @keyframes up-fade-in {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    ul {
+      view-timeline-name: --item-timeline;
+      animation: 1s up-fade-in both;
+      animation-timeline: --item-timeline;
+      animation-range: contain 0% contain 50%;
     }
   }
 </style>

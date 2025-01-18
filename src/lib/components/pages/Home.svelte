@@ -1,7 +1,14 @@
 <script>
-  import { Hero, TicketCarousel, HowItWorks, HeadLine, WhatWeDo, GiftCard } from '$lib/index'
-  export let items
-  export let itemCollection
+  import {
+    Hero,
+    TicketCarousel,
+    HowItWorks,
+    HeadLine,
+    WhatWeDo,
+    GiftCard,
+  } from "$lib/index";
+  export let items;
+  export let itemCollection;
 </script>
 
 <svelte:head>

@@ -1,18 +1,21 @@
 <script>
-  import { Button, ArrowRight, Image } from '$lib/index'
-  export let items
+  import { Button, ArrowRight, Image } from "$lib/index";
+  export let items;
 </script>
 
 <section id="main">
   {#each items[2].componentsCollection.items as item}
-    <article>
-      <Image
-        src={item.asset.url}
-        alt={item.icon.title}
-        opacity="0.4"
-        brdRadius="10px"
-        loading="lazy"
-      />
+    <article class="float-animation">
+      <div class="images">
+        <Image
+          src={item.asset.url}
+          alt={item.icon.title}
+          opacity="0.4"
+          brdRadius="10px"
+          loading="lazy"
+          class="scroll-image"
+        />
+      </div>
       <div class="content-inner">
         <h3>
           <span
@@ -102,7 +105,7 @@
   @keyframes slide-fade-in {
     from {
       opacity: 0;
-      transform: translateY(5vh);
+      transform: translateX(5vh);
     }
   }
 
