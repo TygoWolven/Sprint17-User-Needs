@@ -161,6 +161,7 @@
     }
     100% {
       transform: translateY(0%);
+      backdrop-filter: blur(50px);
       opacity: 1;
     }
   }
