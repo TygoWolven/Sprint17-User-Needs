@@ -1,5 +1,8 @@
+
+
 import { error } from '@sveltejs/kit'
 import contentfulFetch from '../api/contentful-fetch'
+
 
 
 const query = `

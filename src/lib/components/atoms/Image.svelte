@@ -1,21 +1,21 @@
 <script>
-  import { transformImageUrl } from '../../../api/contentful-images-fetch'
+  import { transformImageUrl } from "../../../api/contentful-images-fetch";
 
-  export let src = ''
-  export let width = ''
-  export let height = ''
-  export let alt = ''
-  export let opacity = ''
-  export let brdRadius = ''
-  export let loading = ''
+  export let src = "";
+  export let width = "";
+  export let height = "";
+  export let alt = "";
+  export let opacity = "";
+  export let brdRadius = "";
+  export let loading = "";
 
   // Dynamische URL's voor verschillende formaten
-  const smallWebp = transformImageUrl(src, { w: 375, fm: 'webp' })
-  const mediumWebp = transformImageUrl(src, { w: 768, fm: 'webp' })
-  const largeWebp = transformImageUrl(src, { w: 1024, fm: 'webp' })
-  const smallFallback = transformImageUrl(src, { w: 375 })
-  const mediumFallback = transformImageUrl(src, { w: 768 })
-  const largeFallback = transformImageUrl(src, { w: 1024 })
+  const smallWebp = transformImageUrl(src, { w: 375, fm: "webp" });
+  const mediumWebp = transformImageUrl(src, { w: 768, fm: "webp" });
+  const largeWebp = transformImageUrl(src, { w: 1024, fm: "webp" });
+  const smallFallback = transformImageUrl(src, { w: 375 });
+  const mediumFallback = transformImageUrl(src, { w: 768 });
+  const largeFallback = transformImageUrl(src, { w: 1024 });
 </script>
 
 <picture>

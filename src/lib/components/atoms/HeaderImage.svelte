@@ -1,17 +1,17 @@
 <script>
-  export let alt = ''
-  export let src = ''
-  export let opacity = ''
+  export let alt = "";
+  export let src = "";
+  export let opacity = "";
 
   // Webp images
-  export let smallWebp = '../header-image-small.webp'
-  export let mediumWebp = '../header-image-medium.webp'
-  export let largeWebp = '../header-image-large.webp'
+  export let smallWebp = "../header-image-small.webp";
+  export let mediumWebp = "../header-image-medium.webp";
+  export let largeWebp = "../header-image-large.webp";
 
   // Fallback images for support
-  export let smallFallback = '../header-image-small.jpg'
-  export let mediumFallback = '../header-image-medium.jpg'
-  export let largeFallback = '../header-image-large.jpg'
+  export let smallFallback = "../header-image-small.jpg";
+  export let mediumFallback = "../header-image-medium.jpg";
+  export let largeFallback = "../header-image-large.jpg";
 </script>
 
 <picture>
@@ -28,7 +28,7 @@
   <source media="(max-width: 1024px)" srcset={largeFallback} />
 
   <!-- Standaard afbeelding voor andere gevallen -->
-  <img {src} {alt} style={`opacity: ${opacity}`} />
+  <img {src} {alt} style={`opacity: ${opacity};`} />
 </picture>
 
 <style>

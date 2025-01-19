@@ -1,6 +1,6 @@
 <script>
-  import { Button, ArrowRight, Image } from '$lib/index'
-  export let items
+  import { Button, ArrowRight, Image } from "$lib/index";
+  export let items;
 </script>
 
 <section id="main">
@@ -27,7 +27,7 @@
         </h3>
         <p>{item.textParagraph}</p>
         <Button
-          href="/"
+          href="/home/about-us"
           variant="secondary"
           title="Read More"
           size="sm"

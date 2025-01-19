@@ -1,7 +1,7 @@
 <script>
-  import { Image, RouteIcon, CocktailIcon, Button } from '$lib/index'
-  export let itemCollection
-  const items = itemCollection.componentsCollection.items
+  import { Image, RouteIcon, CocktailIcon, Button } from "$lib/index";
+  export let itemCollection;
+  const items = itemCollection.componentsCollection.items;
 </script>
 
 {#each items as item}
@@ -20,18 +20,35 @@
 
     <div>
       <p>
-        <span><RouteIcon width="25" height="25" fill="var(--page-bg-color)" /></span>
+        <span
+          ><RouteIcon
+            width="25"
+            height="25"
+            fill="var(--page-bg-color)"
+          /></span
+        >
         {item.location}
       </p>
 
       <p>
-        <span><CocktailIcon width="25" height="25" fill="var(--page-bg-color)" /></span>
+        <span
+          ><CocktailIcon
+            width="25"
+            height="25"
+            fill="var(--page-bg-color)"
+          /></span
+        >
         {item.cocktailDescription}
       </p>
 
       <div>
         <Button type="button" variant="primary" title="Book Now" size="m" />
-        <Button href="/home/{item.slug}" variant="secondary" title="Read More" size="m" />
+        <Button
+          href="/home/{item.slug}"
+          variant="secondary"
+          title="Read More"
+          size="m"
+        />
       </div>
     </div>
   </article>
@@ -49,7 +66,11 @@
 
   div:nth-of-type(1) {
     position: relative;
-    background: linear-gradient(137deg, rgba(206, 101, 56, 1) 0%, rgba(32, 22, 17, 1) 0%);
+    background: linear-gradient(
+      137deg,
+      rgba(206, 101, 56, 1) 0%,
+      rgba(32, 22, 17, 1) 0%
+    );
   }
 
   div:nth-of-type(2) {
